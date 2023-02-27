@@ -1,0 +1,59 @@
+:root{
+    --primary: #009fb7;
+    --secondary: #885100;
+    --accent: #fbb156;
+    --white: #f0fff2;
+    --black: #272727;
+}
+.text-primario{
+    color: var(--primary)
+}
+.text-secondario{
+    color: var(--secondary)
+}
+.text-accento{
+    color: var(--accent)
+}
+.text-whiteCus{
+    color: var(--white)
+}
+.text-blackCus{
+    color: var(--black)
+}
+.bg-primario{
+    background-color: var(--primary)
+}
+.bg-secondario{
+    background-color: var(--secondary)
+}
+.bg-accento{
+    background-color: var(--accent)
+}
+.bg-whiteCus{
+    background-color: var(--white)
+}
+.bg-blackCus{
+    background-color: var(--black)
+}
+.borde-primario{
+    background-color: var(--primary)
+}
+.borde-secondario{
+    background-color: var(--secondary)
+}
+.borde-accento{
+    background-color: var(--accent)
+}
+.borde-whiteCus{
+    background-color: var(--white)
+}
+.borde-blackCus{
+    background-color: var(--black)
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+h1, h2, h3, .h1, .h2, .h3 {
+    font-family: 'Shantell Sans', cursive;
+}
