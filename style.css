@@ -1,54 +1,55 @@
+
 :root{
-    --primary: #009fb7;
+    --primary: rgb(0, 159, 183);
     --secondary: #885100;
     --accent: #fbb156;
-    --white: #f0fff2;
+    --white: rgb(240, 255, 242);
     --black: #272727;
 }
 .text-primario{
-    color: var(--primary)
+    color: var(--primary);
 }
 .text-secondario{
-    color: var(--secondary)
+    color: var(--secondary);
 }
 .text-accento{
-    color: var(--accent)
+    color: var(--accent);
 }
 .text-whiteCus{
-    color: var(--white)
+    color: var(--white);
 }
 .text-blackCus{
-    color: var(--black)
+    color: var(--black);
 }
 .bg-primario{
-    background-color: var(--primary)
+    background-color: var(--primary);
 }
 .bg-secondario{
-    background-color: var(--secondary)
+    background-color: var(--secondary);
 }
 .bg-accento{
-    background-color: var(--accent)
+    background-color: var(--accent);
 }
 .bg-whiteCus{
-    background-color: var(--white)
+    background-color: var(--white);
 }
 .bg-blackCus{
-    background-color: var(--black)
+    background-color: var(--black);
 }
-.borde-primario{
-    background-color: var(--primary)
+.border-primario{
+    background-color: var(--primary);
 }
-.borde-secondario{
-    background-color: var(--secondary)
+.border-secondario{
+    background-color: var(--secondary);
 }
-.borde-accento{
-    background-color: var(--accent)
+.border-accento{
+    background-color: var(--accent);
 }
-.borde-whiteCus{
-    background-color: var(--white)
+.border-whiteCus{
+    background-color: var(--white);
 }
-.borde-blackCus{
-    background-color: var(--black)
+.border-blackCus{
+    background-color: var(--black);
 }
 
 *{
@@ -56,4 +57,48 @@
 }
 h1, h2, h3, .h1, .h2, .h3 {
     font-family: 'Shantell Sans', cursive;
+}
+
+/* ------------------------------- */
+.header{
+    background: linear-gradient(145deg, rgba(0, 159, 183, 0.384), rgba(240, 255, 242, 0.209)), url('./media/header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1{
+    margin-top: 100px;
+    font-size: 80px;
+}
+
+@media  screen and (max-width:900px){
+    h1{
+        padding-top: 50px;
+        font-size: 60px;
+    }
+}
+
+/* navbar */
+.nav-link{
+    color: var(--white );
+}
+.logoYellow{
+    width: 40px;
+}
+.logoBlue{
+    width: 40px;
+}
+.btn-Custom{
+    border: 2px solid var(--accent);
+    transition: 0.8s;
+}
+.btn-Custom:hover{
+    border: 2px solid var(--white);
+}
+#navIcon{
+    transition: 0.4s;
+}
+#mainNav{
+    transition: 0.8s;
 }
