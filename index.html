@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Presto</title>
+    <!-- AOS CDN CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- FONTAWESOME CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- BOOTSTRAP CSS -->
@@ -12,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- SWIPER CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <!-- CSS CUSTOM -->
     <link rel="stylesheet" href="style.css">
   </head>
@@ -61,16 +65,214 @@
     <header class="container-fluid">
       <div class="row header vh-100" id="control">
         <div class="col-12 text-center m-custom">
-          <h1 class="fw-bold">Presto<span class="text-whiteCus">.it</span></h1>
+          <h1 data-aos="zoom-in" class="fw-bold">Presto<span class="text-whiteCus">.it</span></h1>
         </div>
       </div>
     </header>
     <!-- FINE HEADER -->
-    <div style="height: 4000px">
-    </div>
+    <!-- SEZIONE SCROLL ANIMATION -->
+    <section class="container my-5 py-5">
+      <div class="row">
+        <div class="col-12 col-md-6 d-flex align-items-center">
+          <img id="test-img" src="./media/shipper.png" data-aos="fade-right" class="img-fluid" alt="corriere">
+        </div>
+        <div class="col-12 col-md-6">
+          <!-- <p id="test">Francesco</p> -->
+            <h2 class="text-center" id="h2Test">Un pò di numeri</h2>
+            <p class="lead text-canter"><span class="increments-numbers d-block" id="first-Span"> 0 </span> Clienti soddisfatti</p>
+            <p class="lead text-canter"><span class="increments-numbers d-block" id="second-Span"> 0 </span> Prodotti venduti</p>
+            <p class="lead text-canter"><span class="increments-numbers d-block" id="third-Span"> 0 </span> Recensioni</p>
+          </div>
+      </div>
+    </section>
+    <!-- <div style="height: 4000px"></div> -->
+    <!-- FINE SEZIONE SCROLL ANIMATION -->
+    <!-- INIZIO SEZION SWIPER -->
+    <section class="container my-5 py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <!-- Slider main container -->
+          <div class="swiper mySwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides sostituite da quelle create dinamicamente
+              <div class="swiper-slide d-flex align-items-center justify-content-center">
+                <div class="card-feedback">
+                  <p class="h3"> Nome persona 1</p>
+                  <p class="fst-italic text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium, molestiae ipsum vel, fuga ipsa, nemo dolorum dicta quidem veritatis perferendis suscipit ducimus. Autem repudiandae harum eius tenetur eligendi explicabo?</p>
+                </div>
+                <img src="https://picsum.photos/300" alt="">
+              </div>
+              <div class="swiper-slide d-flex align-items-center justify-content-center">
+                <div class="card-feedback">
+                  <p class="h3"> Nome persona 2</p>
+                  <p class="fst-italic text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium, molestiae ipsum vel, fuga ipsa, nemo dolorum dicta quidem veritatis perferendis suscipit ducimus. Autem repudiandae harum eius tenetur eligendi explicabo?</p>
+                </div>
+                <img src="https://picsum.photos/600" alt="">
+              </div>
+              <div class="swiper-slide d-flex align-items-center justify-content-center">
+                <div class="card-feedback">
+                  <p class="h3"> Nome persona 3</p>
+                  <p class="fst-italic text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium, molestiae ipsum vel, fuga ipsa, nemo dolorum dicta quidem veritatis perferendis suscipit ducimus. Autem repudiandae harum eius tenetur eligendi explicabo?</p>
+                </div>
+                <img src="https://picsum.photos/800" alt="">
+              </div> -->
+            </div>
+            <!-- If we need pagination (palline)-->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+            <div class="autoplay-progress">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span></span>
+            </div>
+          </div>
+          <!-- FINE Slider main container -->
+        </div>
+      </div>
+    </section>
+    <!-- FINE SEZION SWIPER -->
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- JS BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- CDN SWIPER -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- JS CUSTOM ESTERNO -->
     <script src="./main.js"></script>
+    <!-- JS CUSTOM INTERNO -->
+    <script>
+      // oggetto feedback
+      feedback = [
+        {name: 'Antonio', quote: "Che bel sito"},
+        {name: 'Francesco', quote: "Sito meraviglioso"},
+        {name: 'Emanuele', quote: "Non mi piace"},
+        {name: 'Nicola', quote: "Bellissimo"}
+      ]
+      // Creazione card
+      let swiperWrapper = document.querySelector('.swiper-wrapper');
+      feedback.forEach( (recensione) => {
+        let div = document.createElement('div');
+        div.classList.add('swiper-slide', 'd-flex', 'align-items-center', 'justify-content-center');
+        div.innerHTML = `
+          <div class="card-feedback">
+            <p class="h3"> ${recensione.name} </p>
+            <p class="fst-italic text-center"> ${recensione.quote} </p>
+          </div>
+        `;
+        swiperWrapper.appendChild(div);
+      })
+      // Inizializzazione swiper
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      var swiper = new Swiper(".mySwiper", {
+         loop: true,
+
+        spaceBetween: 30,
+        centeredSlides: true,
+        //   // effetto autoplay
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false
+        },
+        // effetto Cube
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 1,   // "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,    // true,
+        }, 
+        // Breakpoint
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+          }},
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        // Navigation arrows
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev',
+        // },
+
+        // And if we need scrollbar NON CON AUTOPLAY
+        // scrollbar: {
+        //   el: '.swiper-scrollbar',
+        // },
+
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress);
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+          }
+        }
+      });
+
+
+      // const swiper = new Swiper('.mySwiper', {
+      //   // Optional parameters
+      //   // direction: 'horizontal',
+      //    loop: true,
+
+      //   // effetto autoplay
+      //   autoplay: {
+      //     delay: 500,
+      //     disableOnInteraction: false
+      //   },
+      
+      //   // effetto Cube
+      //   effect: "coverflow",
+      //   grabCursor: true,
+      //   centeredSlides: true,
+      //   slidesPerView: 3,   // "auto",
+      //   coverflowEffect: {
+      //     rotate: 50,
+      //     stretch: 0,
+      //     depth: 100,
+      //     modifier: 1,
+      //     slideShadows: false,    // true,
+      //   }, 
+      //   // If we need pagination
+      //   pagination: {
+      //     el: '.swiper-pagination',
+      //   },
+      
+      //   // Navigation arrows
+      //   // navigation: {
+      //   //   nextEl: '.swiper-button-next',
+      //   //   prevEl: '.swiper-button-prev',
+      //   // },
+      
+      //   // And if we need scrollbar
+      //   scrollbar: {
+      //     el: '.swiper-scrollbar',
+      //   },
+      //   on: {
+      //   autoplayTimeLeft(s, time, progress) {
+      //     progressCircle.style.setProperty("--progress", 1 - progress);
+      //     progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+      //   }
+      // }
+      // });
+  </script>
   </body>
 </html>

@@ -6,6 +6,9 @@
     --white: rgb(240, 255, 242);
     --black: #272727;
 }
+body{
+    background-color: var(--primary);
+}
 .text-primario{
     color: var(--primary);
 }
@@ -102,3 +105,25 @@ h1{
 #mainNav{
     transition: 0.8s;
 }
+
+.increments-numbers{
+    font-size: 90px;
+    color: var(--white);
+    font-weight: 700;
+}
+/* SWIPER */
+.swiper {
+    /* width: 600px; */
+    height: 300px;
+  }
+.card-feedback{
+    height: 200px;
+    width: 300px;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
