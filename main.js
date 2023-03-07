@@ -87,3 +87,18 @@ let observer = new IntersectionObserver( (entries)=>{
     });
 });
 observer.observe(h2Test);
+
+//  MOUSE ENTER 
+let smiles = document.querySelectorAll('.fa-face-smile');
+let columns = document.querySelectorAll('.col-custom');
+// console.log(columns);
+columns.forEach( (colonna, i)=>{
+    colonna.addEventListener('mouseenter', ()=> {
+        smiles[i].classList.remove('text-accent');
+        smiles[i].classList.add('text-primary')
+    });
+    colonna.addEventListener('mouseleave', ()=> {
+        smiles[i].classList.remove('text-primary')
+        smiles[i].classList.add('text-accent');
+    })
+} )

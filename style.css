@@ -127,3 +127,19 @@ h1{
     align-items: center;
     justify-content: center;
   }
+
+  /* mouse enter */
+  .col-custom{
+    color: var(--white);
+    border: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.4s;
+  }
+  .col-custom:hover{
+    background-color: var(--white);
+    color: var(--black);
+    transform: scale(1.2);
+    border: 3px solid var(--primary);
+    
+  }
