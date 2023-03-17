@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presto.it</title>
+    <link rel="shortcut icon" href="./media/logoBLue.png" type="image/x-icon">
+    <!-- AOS CDN CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- SWIPER CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- CSS CUSTOM -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- INIZIO NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container-fluid">
+        <!-- Logo Yellow-->
+        <a class="navbar-brand logoYellow" href="#">
+          <img class="img-fluid" src="./media/logoYellow.png" alt="Logo del Sito">
+        </a>
+        <!-- Logo Blue-->
+        <a class="navbar-brand logoBlue d-none" href="#">
+          <img class="img-fluid" src="./media/logoBlue.png" alt="Logo del Sito">
+        </a>
+
+        <!-- Pulsante collassato -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <i id="navIcon" class="fa-solid fa-hand-pointer fa-flip-vertical fa-2x text-whiteCus"></i>
+        </button>
+        <!-- Area link -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Home -->
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Annunci</a>
+            </li>
+            <!-- Disabled -->
+            <li class="nav-item">
+              <a class="nav-link disabled">Chi siamo</a>
+            </li>
+          </ul>
+          <!-- Form di ricerca -->
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-Custom text-whiteCus" type="submit">Cerca</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- FINE NAVBAR -->
+    <!-- INIZIO HEADER -->
+    <!-- <header class="container-fluid">
+      <div class="row header vh-100" id="control">
+        <div class="col-12 text-center m-custom">
+          <h1 data-aos="zoom-in" class="fw-bold">Presto<span class="text-whiteCus">.it</span></h1>
+        </div>
+      </div>
+    </header> -->
+    <!-- FINE HEADER -->
+    <!-- INIZIO SEZIONE ANNUNCI -->
+    <!-- FINE SEZIONE ANNUNCI -->
+    <section class="container-fluid">
+      <div class="row m-filterSection">
+        <div class="col-12 col-md-3">
+          <h2>Filtra per: </h2>
+          <div class="accordion accordion-flush" id="accordionFrancesc">
+            <!-- FILTRO Categoria -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUno" aria-expanded="false" aria-controls="flush-collapseUno">
+                  <p class="h3">Categoria</p>
+                </button>
+              </h2>
+              <div id="flush-collapseUno" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <form action="">
+                <div id="categoryWrapper" class="accordion-body">
+                  <!-- Inizio Pulsanti radio -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="All" checked>
+                    <label class="form-check-label" for="All">
+                      Tutte le categorie
+                    </label>
+                  </div>
+                  <!-- Fine Pulsanti radio -->
+                </div>
+              </form>
+              </div>
+            </div>
+            <!-- FILTRO Prezzo -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseDue" aria-expanded="false" aria-controls="flush-collapseDue">
+                  <p class="h3">Prezzo</p>
+                </button>
+              </h2>
+              <div id="flush-collapseDue" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <input type="range" id="priceInput" min="0" max="100" value="50">
+                  <div>
+                    <span id="incrementNumber" class="inputNumber">
+                      0
+                    </span>
+                    <span id="incrementNumber" class="inputNumber">
+                      €
+                    </span>
+                  </div>
+                  <!-- Inizio Pulsanti radio -->
+                  <!-- <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Default radio
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Default checked radio
+                    </label>
+                  </div> -->
+                  <!-- Fine Pulsanti radio -->
+                </div>
+              </div>
+            </div>
+            <!-- FILTRO Parola -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTre" aria-expanded="false" aria-controls="flush-collapseTre">
+                  <p class="h3">Parola</p>
+                </button>
+              </h2>
+              <div id="flush-collapseTre" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <input type="text" id="wordInput" placeholder="Cerca il prodotto">                  
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9" >
+          <div class="row" id="cardsWrapper">
+            <!-- Card annunci  -->
+            <!-- <div class="col-12 col-md-3 my-3 d-flex justify-content-center">
+              <div class="announcementCard">
+                <p class="h3">Nome Prodotto</p>
+                <p class="h3">Categoria</p>
+                <p class="h3">Prezzo</p>
+              </div>
+            </div>  -->
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- INIZIO FOOTER -->
+    <!-- <footer class="container-fluid my-5 py-5 bg-blackCus">
+      <div class="container">
+        <div class="row h-footer-cus">
+          <div class="col-12 col-md-4 text-center my-5">
+            <p class="h2 text-accento">About Presto</p>
+            <p class="my-3 text-primario">P.IVA: 1234567</p>
+            <p class="my-3 text-primario">Indirizzo: Strada San Giorgio Martire, 2D</p>
+            <p class="my-3 text-primario">Tel. 3331223344</p>
+            <p class="my-3 text-primario">e-mail: miamail@gmail.com</p>
+            <div>
+              <i class="fa-brands fa-facebook fa-2x text-whiteCus fa-beat"></i>
+              <i class="fa-brands fa-instagram fa-2x text-whiteCus fa-beat mx-3"></i>
+              <i class="fa-brands fa-linkedin fa-2x text-whiteCus fa-beat"></i>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 text-center my-5">
+            <p class="h2 text-accento">Quick Menu</p>
+            <div class="d-flex flex-column justify-content-center h-75">
+              <a href="#numeriSpaziali"><p>Numeri Spaziali</p></a>
+              <a href="#diconodiNoi"><p>Dicono di Noi</p></a>
+              <a href="#domandeFrequenti"><p>Domande Frequenti</p></a>
+           </div>
+          </div>
+          <div class="col-12 col-md-4 text-center my-5">
+            <p class="h2 text-accento">Collabs</p>
+            <p class="text-primario">Amazon</p>
+            <p class="text-primario">Disney</p>
+            <p class="text-primario">Squelli</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-2">
+            <h6 class="text-whiteCus text-center">Tutti i diritti riservati</h6>
+          </div>
+        </div> 
+        </div>
+      </div>
+    </footer> -->
+    <!-- FINE FOOTER -->
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- JS CUSTOM ESTERNO -->
+    <script src="./annunci.js"></script>
+    <!-- JS CUSTOM INTERNO -->
+  </body>
+</html>

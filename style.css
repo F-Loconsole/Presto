@@ -1,8 +1,8 @@
 
 :root{
-    --primary: rgb(0, 159, 183);
+    --primary: rgb(0, 149, 253);
     --secondary: #885100;
-    --accent: #fbb156;
+    --accent: rgb(255,253,23);
     --white: rgb(240, 255, 242);
     --black: #272727;
 }
@@ -145,4 +145,35 @@ h1{
   }
   .h-footer-cus{
     min-height: 50px;
+  }
+
+  /* Annunci */
+  .m-filterSection{
+    margin-top: 200px;
+  }
+
+  .announcementCard{
+    width: 250px;
+    min-height: 300px;
+    border: 2px solid var(--black);
+    border-radius: 20px;
+    background-color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #priceInput{
+    width: 100%;
+  }
+  .inputNumber{
+    color: var(--secondary);
+    font-weight: 900;
+    font-size: 40px;
+  }
+  .card-head img{
+    border-radius: 50%;
+    height: 100px;
   }
