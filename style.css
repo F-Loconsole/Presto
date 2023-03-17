@@ -149,7 +149,7 @@ h1{
 
   /* Annunci */
   .m-filterSection{
-    margin-top: 200px;
+    /* margin-top: 200px; */
   }
 
   .announcementCard{
@@ -176,4 +176,11 @@ h1{
   .card-head img{
     border-radius: 50%;
     height: 100px;
+  }
+
+  #scroller{
+    position:fixed;
+    bottom: 8%;
+    right: 5%;
+    z-index: 3;
   }

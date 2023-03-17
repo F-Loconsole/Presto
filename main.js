@@ -8,6 +8,9 @@ let logoBlue = document.querySelector('.logoBlue');
 
 let ruotato=false;
 let navIcon = document.querySelector("#navIcon");
+
+let scroller = document.querySelector("#scroller");
+
 navIcon.addEventListener('click', ()=>{
     if (! ruotato){
         navIcon.classList.remove('fa-flip-vertical');
@@ -23,12 +26,14 @@ window.addEventListener('scroll', ()=>{
         mainNav.style.height = '90px';
         logoYellow.classList.add("d-none");
         logoBlue.classList.remove("d-none");
+        scroller.classList.remove("d-none");
     }
     else{
         mainNav.style.backgroundColor = 'transparent';
         mainNav.style.height = '55px';
         logoYellow.classList.remove("d-none");
         logoBlue.classList.add("d-none");
+        scroller.classList.add("d-none");
    }
 });
 // test attributo custom

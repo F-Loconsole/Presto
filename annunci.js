@@ -56,19 +56,17 @@ fetch("./annunci.json").then( (response)=> response.json()).then( (data)=> {
     setPriceInput();
     priceInput.addEventListener('input', ()=>{
         incrementNumber.innerHTML = priceInput.value;
-        filterdByPrice(priceInput.value);
+        // filteredByPrice(priceInput.value);
+        globalFilter();
     });
     
     // Filtro per parola
     let wordInput =document.querySelector("#wordInput");
     wordInput.addEventListener('input', ()=>{
-        filterdByWord(wordInput.value);
+        // filteredByWord(wordInput.value);
+        globalFilter();
     });
 
-    function filterdByWord(nome){
-        let filtered = data.filter( (annuncio)=> annuncio.name.toLowerCase().includes(nome.toLowerCase()));
-        showCards(filtered);
-    }    
     function setCategoryFilter() {
         let categories = data.map( (annuncio)=> annuncio.category )
         let uniqueCategories = [];
@@ -93,19 +91,27 @@ fetch("./annunci.json").then( (response)=> response.json()).then( (data)=> {
         let checkInputs = document.querySelectorAll(".form-check-input");
         checkInputs.forEach( (checkInput)=> {
             checkInput.addEventListener('click', ()=>{
-                filterdByCategory(checkInput.id);
+                // filteredByCategory(checkInput.id);
+                globalFilter();
             })
         });
- 
-        function filterdByCategory(categoria){
-            if (categoria != "All"){
-                let filtered = data.filter( (annuncio)=> annuncio.category == categoria);
-                // console.log(filtered);
-                showCards(filtered);
-            } else{
-                // console.log(data);
-                showCards(data);
-            }
+    }
+    function filteredByCategory(array){
+        let checkInputs = document.querySelectorAll(".form-check-input");
+        // checkInputs è un array-like
+        // trasformato in array per usare la funzione find
+        let categoria = Array.from(checkInputs).find( (pulsanteRadio)=>pulsanteRadio.checked ).id;
+        //  si seleziona solo l'id del pulsante checked
+        // console.log(categoria);
+        if (categoria != "All"){
+            let filtered = array.filter( (annuncio)=> annuncio.category == categoria);
+            // console.log(filtered);
+            // showCards(filtered);
+            return filtered;
+        } else{
+            // console.log(data);
+            // showCards(data);
+            return array;
         }
     }
     function showCards(array){
@@ -137,8 +143,25 @@ fetch("./annunci.json").then( (response)=> response.json()).then( (data)=> {
         priceInput.value = Math.ceil(maxPrice);
         incrementNumber.innerHTML = Math.ceil(maxPrice);
     }
-    function filterdByPrice(prezzo){
-        let filtered = data.filter( (annuncio)=> Number(annuncio.price) <= prezzo);
-        showCards(filtered);
+    function filteredByPrice(array){
+        let prezzo = priceInput.value;
+        let filtered = array.filter( (annuncio)=> Number(annuncio.price) <= prezzo);
+        // console.log(filtered);
+        return filtered;
+        // showCards(filtered);
+    }
+    function filteredByWord(array){
+        let nome = wordInput.value;
+        let filtered = array.filter( (annuncio)=> annuncio.name.toLowerCase().includes(nome.toLowerCase()));
+        return filtered;
+        // showCards(filtered);
+    }        
+    // Filtro globale
+    function globalFilter(){
+        let filterByCategory = filteredByCategory(data);
+        // console.log(filterByCategory);
+        let filterByPrice = filteredByPrice(filterByCategory);
+        let filterByWord = filteredByWord(filterByPrice);
+        showCards(filterByWord);
     }
 }) 
